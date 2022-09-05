@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -35,9 +36,9 @@ public class Transacao {
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "data_transacao")
-	private Date dataTransacao;
+	private Date dataTransacao = new java.sql.Date(System.currentTimeMillis());
 	
-	@NotBlank(message = "Valor da transaçao é obrigatório")
+	@Digits(integer = 7, fraction = 2, message = "Apenas milhares e 2 casas apos o ponto")
 	@Column(name = "valor_transacao")
 	private BigDecimal valorTransacao;
 	

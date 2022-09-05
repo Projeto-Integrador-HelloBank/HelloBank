@@ -1,4 +1,4 @@
-package com.br.hellorbank.Controller;
+package com.br.hellorbank.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,26 +20,21 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("\"tb_transacao\"")
+@RequestMapping("/transacao")
 public class TransacaoController {
 
 	@Autowired
 	private TransacaoService service;
-
-	@PostMapping
-	public ResponseEntity<Transacao> salvar(@RequestBody Transacao transacao) {
-
-		Transacao transacaoSalvo = service.salvar(transacao);
-		return ResponseEntity.status(HttpStatus.CREATED).body(transacaoSalvo);
-
-	}
-
+	
 	@GetMapping
 	public ResponseEntity<List<Transacao>> listarTodos() {
+		return ResponseEntity.ok(service.listarTodos());
+	}
 
-		List<Transacao> transacao = service.listarTodos();
-		return ResponseEntity.status(HttpStatus.OK).body(transacao);
 
+	@PostMapping("/cadastrar")
+	public ResponseEntity<Transacao> salvar(@RequestBody Transacao transacao) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(transacao));
 	}
 
 	@GetMapping("/{codigo}")

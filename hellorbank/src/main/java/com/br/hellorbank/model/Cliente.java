@@ -51,7 +51,7 @@ public class Cliente {
 	
 	@Email (message = "E-mail inválido")
 	@NotBlank (message = "E-mail é obrigatório")
-	@Size (min = 20, max=60, message = "O E-mail deve possuir entre 20 a 60 caracteres")
+	@Size (min = 10, max=60, message = "O E-mail deve possuir entre 20 a 60 caracteres")
 	@Column (name = "email", unique = true)
 	private String email;
 	
