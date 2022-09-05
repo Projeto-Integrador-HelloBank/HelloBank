@@ -3,13 +3,20 @@ create database db_hellobank;
 use db_hellobank;
 
 create table tb_cliente(
-id int auto_increment primary key,
+id int auto_increment,
 nome varchar(100) not null,
-cpf_cnpj varchar(30) not null
-);
+cpf varchar(20) not null,
+endereco varchar(50) not null,
+cidade varchar(50) not null, 
+estado varchar(50) not null, 
+email varchar(60) not null,
+telefone varchar(18) not null,
+primary key(id));
+
 
 create table tb_conta(
 codigo int auto_increment primary key,
+tipo_conta varchar(20) not null,
 numero_conta varchar(45) not null,
 agencia varchar(45) not null,
 saldo double not null,
