@@ -45,8 +45,8 @@ public class Transacao {
 	@JoinColumn(name = "conta_origem")
 	private Conta contaOrigem;
 	
-	@ManyToOne
-	@JoinColumn(name = "conta_destino")
-	private Conta contaDestino;
+	//@ManyToOne
+	//@JoinColumn(name = "conta_destino")
+	//private Conta contaDestino;
 
 }
