@@ -16,6 +16,9 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "tb_transacao")
 public class Transacao {
@@ -28,7 +31,7 @@ public class Transacao {
 	@NotBlank(message = "Tipo da transação é obrigatório")
 	@Size(min = 5, max = 50, message = "O tipo de transação deve possuir entre 5 até 50 caracteres")
 	@Column(name = "tipo_transacao")
-	private String tipoTransicao;
+	private String tipoTransacao;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "data_transacao")
@@ -46,53 +49,4 @@ public class Transacao {
 	@JoinColumn(name = "conta_destino")
 	private Conta contaDestino;
 
-	public long getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
-	}
-
-	public String getTipoTransicao() {
-		return tipoTransicao;
-	}
-
-	public void setTipoTransicao(String tipoTransicao) {
-		this.tipoTransicao = tipoTransicao;
-	}
-
-	public Date getDataTransacao() {
-		return dataTransacao;
-	}
-
-	public void setDataTransacao(Date dataTransacao) {
-		this.dataTransacao = dataTransacao;
-	}
-
-	public BigDecimal getValorTransacao() {
-		return valorTransacao;
-	}
-
-	public void setValorTransacao(BigDecimal valorTransacao) {
-		this.valorTransacao = valorTransacao;
-	}
-
-	public Conta getContaOrigem() {
-		return contaOrigem;
-	}
-
-	public void setContaOrigem(Conta contaOrigem) {
-		this.contaOrigem = contaOrigem;
-	}
-
-	public Conta getContaDestino() {
-		return contaDestino;
-	}
-
-	public void setContaDestino(Conta contaDestino) {
-		this.contaDestino = contaDestino;
-	}
-	
-	
 }
