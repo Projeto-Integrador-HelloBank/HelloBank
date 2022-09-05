@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -29,7 +30,7 @@ public class Conta {
 	private Long codigo;
 	
 	@NotBlank(message = "A escolha do tipo de conta é obrigatório")
-	@Size(min = 10, max = 20, message = "O tipo de conta possuir entre 10 até 20 caracteres")
+	@Size(min = 5, max = 20, message = "O tipo de conta possuir entre 10 até 20 caracteres")
 	@Column(name = "tipo_conta")
 	private String tipoConta;
 	
@@ -43,13 +44,13 @@ public class Conta {
 	@Column(name = "agencia")
 	private String agencia;
 	
-	@NotBlank(message = "Saldo é obrigatório")
+	@Digits(integer = 7, fraction = 2, message = "Apenas milhares e 2 casas apos o ponto")
 	@Column(name = "saldo")
 	private BigDecimal saldo;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "data_criacao")
-	private Date dataCriacao;
+	private Date dataCriacao = new java.sql.Date(System.currentTimeMillis());
 	
 	@ManyToOne
 	@JoinColumn(name = "cliente_id")

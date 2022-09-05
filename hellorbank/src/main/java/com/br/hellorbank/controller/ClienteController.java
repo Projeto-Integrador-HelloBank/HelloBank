@@ -1,11 +1,14 @@
-package com.br.hellorbank.Controller;
+package com.br.hellorbank.controller;
 
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,27 +25,22 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("\"tb_cliente\"")
-
+@RequestMapping("/cliente")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ClienteController {
 
 	@Autowired
 	private ClienteService service;
 
-	@PostMapping
-	public ResponseEntity<Cliente> salvar(@RequestBody Cliente cliente) {
-
-		Cliente clienteSalvo = service.salvar(cliente);
-		return ResponseEntity.status(HttpStatus.CREATED).body(clienteSalvo);
+	@PostMapping("/cadastrar")
+	public ResponseEntity<Cliente> salvar(@Valid @RequestBody Cliente cliente) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(cliente));
 
 	}
 
 	@GetMapping
 	public ResponseEntity<List<Cliente>> listarTodos() {
-
-		List<Cliente> cliente = service.listarTodos();
-		return ResponseEntity.status(HttpStatus.OK).body(cliente);
-
+		return ResponseEntity.status(HttpStatus.OK).body(service.listarTodos());
 	}
 
 	@GetMapping("/{id}")
@@ -71,7 +69,7 @@ public class ClienteController {
 
 	}
 
-	@PutMapping
+	@PutMapping("/atualizar")
 	public ResponseEntity<Cliente> atualizar(@RequestBody Cliente cliente) {
 
 		Cliente clienteSalvo = service.salvar(cliente);
