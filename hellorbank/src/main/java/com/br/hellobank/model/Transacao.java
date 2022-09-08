@@ -1,10 +1,14 @@
 package com.br.hellobank.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,25 +18,31 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
 @Table(name = "tb_transacao")
-public class Transacao {
+@ToString
+public class Transacao implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "codigo")
 	private long codigo;
 	
-	@NotBlank(message = "Tipo da transação é obrigatório")
-	@Size(min = 5, max = 50, message = "O tipo de transação deve possuir entre 5 até 50 caracteres")
+	@NotNull
+	@Enumerated(EnumType.STRING)
 	@Column(name = "tipo_transacao")
-	private String tipoTransacao;
+	private TipoMovimentacao tipoTransacao;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "data_transacao")
@@ -42,12 +52,14 @@ public class Transacao {
 	@Column(name = "valor_transacao")
 	private BigDecimal valorTransacao;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name = "conta_origem")
 	private Conta contaOrigem;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name = "conta_destino")
 	private Conta contaDestino;
+
+	
 
 }

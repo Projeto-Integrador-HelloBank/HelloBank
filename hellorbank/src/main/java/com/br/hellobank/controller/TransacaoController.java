@@ -3,6 +3,8 @@ package com.br.hellobank.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.br.hellobank.dtoInput.MovDepositoDTO;
+import com.br.hellobank.dtoInput.MovSaqueDTO;
+import com.br.hellobank.dtoInput.MovTransferenciaDTO;
 import com.br.hellobank.model.Transacao;
 import com.br.hellobank.service.TransacaoService;
 
@@ -25,16 +30,10 @@ public class TransacaoController {
 
 	@Autowired
 	private TransacaoService service;
-	
+
 	@GetMapping
 	public ResponseEntity<List<Transacao>> listarTodos() {
 		return ResponseEntity.ok(service.listarTodos());
-	}
-
-
-	@PostMapping("/cadastrar")
-	public ResponseEntity<Transacao> salvar(@RequestBody Transacao transacao) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(service.salvar(transacao));
 	}
 
 	@GetMapping("/{codigo}")
@@ -49,5 +48,23 @@ public class TransacaoController {
 		return ResponseEntity.status(HttpStatus.OK).body(transacaoOptional.get());
 
 	}
+	   @PostMapping("/transferencia")
+	    public ResponseEntity<Transacao> fazerTransferencia(@RequestBody @Valid MovTransferenciaDTO transferencia) {
+		   Transacao movimentacaoSalva = service.fazerTransferencia(transferencia);
+	        return ResponseEntity.status(HttpStatus.CREATED).body(movimentacaoSalva);
+	    }
+
+	    @PostMapping("/deposito")
+	    public ResponseEntity<Transacao> fazerDeposito(@RequestBody @Valid MovDepositoDTO deposito) {
+
+	        return ResponseEntity.status(HttpStatus.CREATED).body(service.fazerDeposito(deposito));
+	    }
+
+	    @PostMapping("/saque")
+	    public ResponseEntity<Transacao> fazerSaque(@RequestBody @Valid MovSaqueDTO saque) {
+	    	Transacao movimentacaoSalva = service.fazerSaque(saque);
+	        return ResponseEntity.status(HttpStatus.CREATED).body(movimentacaoSalva);
+	    }
+	
 
 }
