@@ -1,4 +1,4 @@
-package br.com.hellobank.dtoInput;
+package br.com.hellobank.dto;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -8,18 +8,16 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 
+import br.com.hellobank.enums.TipoMovimentacao;
 import br.com.hellobank.model.Conta;
-import br.com.hellobank.model.TipoMovimentacao;
 import br.com.hellobank.model.Transacao;
 import br.com.hellobank.service.ContaService;
-
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class MovDepositoDTO {
-
+public class MovSaqueDTO {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataTransacao = new java.sql.Date(System.currentTimeMillis());
 
@@ -27,14 +25,14 @@ public class MovDepositoDTO {
 	private BigDecimal valorTransacao;
 
 	@NotBlank(message = "Obrigatorio colocar numero da conta")
-	private String contaDestino;
+	private String contaOrigem;
 
 	public Transacao toModel(ContaService contaService) {
 		Transacao movimentacao = new Transacao();
-		Conta contaDestino = contaService.buscarNumeroConta(this.contaDestino);
+		Conta contaOrigem = contaService.buscarNumeroConta(this.contaOrigem);
 		movimentacao.setValorTransacao(this.valorTransacao);
-		movimentacao.setContaDestino(contaDestino);
-		movimentacao.setTipoTransacao(TipoMovimentacao.DEPOSITO);
+		movimentacao.setContaOrigem(contaOrigem);
+		movimentacao.setTipoTransacao(TipoMovimentacao.SAQUE);
 
 		return movimentacao;
 	}

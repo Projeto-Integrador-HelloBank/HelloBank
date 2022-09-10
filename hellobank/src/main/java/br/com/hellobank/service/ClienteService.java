@@ -11,28 +11,29 @@ import br.com.hellobank.repository.ClienteRepository;
 
 @Service
 public class ClienteService {
-	
-	@Autowired
-	private  ClienteRepository clienteRepository;
 
-    public Cliente salvar(Cliente cliente){
+    @Autowired
+    private ClienteRepository clienteRepository;
+
+    public Cliente salvar(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
 
-    public List<Cliente> listarTodos(){
+    public List<Cliente> listarTodos() {
         return clienteRepository.findAll();
     }
 
-    public Optional<Cliente> buscarPorId(Long id){
+    public Optional<Cliente> buscarPorId(Long id) {
 
         return clienteRepository.findById(id);
     }
-    public Optional<Cliente> buscarPorCpf(String cpf){
+
+    public Optional<Cliente> buscarPorCpf(String cpf) {
 
         return clienteRepository.findByCpf(cpf);
     }
 
-    public void deletar(Long id){
+    public void deletar(Long id) {
 
         clienteRepository.deleteById(id);
     }

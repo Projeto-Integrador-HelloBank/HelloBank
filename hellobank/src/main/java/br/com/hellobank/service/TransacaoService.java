@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.hellobank.dtoInput.MovDepositoDTO;
-import br.com.hellobank.dtoInput.MovSaqueDTO;
-import br.com.hellobank.dtoInput.MovTransferenciaDTO;
+import br.com.hellobank.dto.MovDepositoDTO;
+import br.com.hellobank.dto.MovSaqueDTO;
+import br.com.hellobank.dto.MovTransferenciaDTO;
 import br.com.hellobank.model.Conta;
 import br.com.hellobank.model.Transacao;
 import br.com.hellobank.repository.TransacaoRepository;
@@ -22,18 +22,19 @@ public class TransacaoService {
 	@Autowired
 	private ContaService contaService;
 
-//	public Transacao transacao(MovimentacaoDepositoDTO transacao) {
-//		Conta origem = buscarConta(transacao.getContaOrigem());
-//		Conta destino = buscarConta(transacao.getContaDestino());
-//
-//		contaService.atualizarSaldo(origem, destino, transacao.getValorTransacao(), transacao.getTipo().toString());
-//
-//		Transacao movimentacao = new Transacao();
-//		movimentacao.setValorTransacao(transacao.getValorTransacao());
-//		movimentacao.setContaOrigem(origem);
-//		movimentacao.setContaDestino(destino);
-//		return movimentacao;
-//	}
+	// public Transacao transacao(MovimentacaoDepositoDTO transacao) {
+	// Conta origem = buscarConta(transacao.getContaOrigem());
+	// Conta destino = buscarConta(transacao.getContaDestino());
+	//
+	// contaService.atualizarSaldo(origem, destino, transacao.getValorTransacao(),
+	// transacao.getTipo().toString());
+	//
+	// Transacao movimentacao = new Transacao();
+	// movimentacao.setValorTransacao(transacao.getValorTransacao());
+	// movimentacao.setContaOrigem(origem);
+	// movimentacao.setContaDestino(destino);
+	// return movimentacao;
+	// }
 
 	public List<Transacao> listarTodos() {
 		return transacaoRepository.findAll();
@@ -61,7 +62,7 @@ public class TransacaoService {
 	public Transacao fazerSaque(MovSaqueDTO saque) {
 		Transacao saqueConta = saque.toModel(contaService);
 		contaService.atualizarSaldo(saqueConta.getContaOrigem(), saqueConta.getContaDestino(),
-				saqueConta.getValorTransacao());		
+				saqueConta.getValorTransacao());
 		return transacaoRepository.save(saqueConta);
 	}
 

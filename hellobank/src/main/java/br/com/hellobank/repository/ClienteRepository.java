@@ -9,8 +9,8 @@ import br.com.hellobank.model.Cliente;
 
 @Repository
 
-public interface ClienteRepository extends JpaRepository<Cliente, Long>{
-	
-Optional <Cliente>findByCpf(String cpf);
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+
+    Optional<Cliente> findByCpf(String cpf);
 
 }

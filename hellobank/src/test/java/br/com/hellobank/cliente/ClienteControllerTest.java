@@ -1,4 +1,4 @@
-package br.com.hellobank.controller;
+package br.com.hellobank.cliente;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
@@ -29,19 +29,21 @@ import junit.framework.TestCase;
 public class ClienteControllerTest extends TestCase {
     @Autowired
     MockMvc mockMvc;
-	
-	@MockBean
-	ClienteRepository clienteRepository;
-	@MockBean
-	ClienteService clienteService;
-	
-	// Cliente clienteA = new Cliente("spring@tudodebom.com", "+55(00)11111-1111");
-    
-    // Cliente b = new Cliente("Spring Doidao", "098.765.432-00", "springDoidao@tudodebom.com", "+55(00)12222-2222");
-    // Cliente c = new Cliente("Alexandre", "123.456.789-00", "alexandre@tudodebom.com", "+55(00)13333-3333");
-    
-	@Test
-	public void  testGetClientes() throws Exception {
+
+    @MockBean
+    ClienteRepository clienteRepository;
+    @MockBean
+    ClienteService clienteService;
+
+    // Cliente clienteA = new Cliente("spring@tudodebom.com", "+55(00)11111-1111");
+
+    // Cliente b = new Cliente("Spring Doidao", "098.765.432-00",
+    // "springDoidao@tudodebom.com", "+55(00)12222-2222");
+    // Cliente c = new Cliente("Alexandre", "123.456.789-00",
+    // "alexandre@tudodebom.com", "+55(00)13333-3333");
+
+    @Test
+    public void testGetClientes() throws Exception {
 
         Cliente clienteA = new Cliente();
         clienteA.setNome("Spring");
@@ -51,17 +53,18 @@ public class ClienteControllerTest extends TestCase {
         clienteA.setEstado("GO");
         clienteA.setEmail("spring@tudodebom.com");
         clienteA.setTelefone("+55(00)11111-1111");
-		//dado
-		List<Cliente> testantoListaCliente = new ArrayList<>(Arrays.asList(clienteA));
-        
+        // dado
+        List<Cliente> testantoListaCliente = new ArrayList<>(Arrays.asList(clienteA));
+
         Mockito.when(clienteService.listarTodos()).thenReturn(testantoListaCliente);
         // quando
-        
+
         mockMvc.perform(MockMvcRequestBuilders
                 .get("/cliente")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].nome", is("Spring")));
-	}
+                .andExpect(jsonPath("$[0].nome", is("Spring")))
+                .andExpect(jsonPath("$[0].cpf", is("123.456.789-00")));
+    }
 }
