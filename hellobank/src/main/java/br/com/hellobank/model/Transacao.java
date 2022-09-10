@@ -20,6 +20,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
+import br.com.hellobank.enums.TipoMovimentacao;
 import lombok.Data;
 import lombok.ToString;
 
@@ -27,7 +28,7 @@ import lombok.ToString;
 @Entity
 @Table(name = "tb_transacao")
 @ToString
-public class Transacao implements Serializable{
+public class Transacao implements Serializable {
 
 	/**
 	 * 
@@ -38,28 +39,26 @@ public class Transacao implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "codigo")
 	private long codigo;
-	
+
 	@NotNull
 	@Enumerated(EnumType.STRING)
 	@Column(name = "tipo_transacao")
 	private TipoMovimentacao tipoTransacao;
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "data_transacao")
 	private Date dataTransacao = new java.sql.Date(System.currentTimeMillis());
-	
+
 	@Digits(integer = 7, fraction = 2, message = "Apenas milhares e 2 casas apos o ponto")
 	@Column(name = "valor_transacao")
 	private BigDecimal valorTransacao;
-	
-	@ManyToOne(cascade=CascadeType.PERSIST)
+
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "conta_origem")
 	private Conta contaOrigem;
-	
-	@ManyToOne(cascade=CascadeType.PERSIST)
+
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "conta_destino")
 	private Conta contaDestino;
-
-	
 
 }

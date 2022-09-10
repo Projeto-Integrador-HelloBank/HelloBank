@@ -5,9 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import br.com.hellobank.model.Conta;
 
-
 @Repository
-public interface ContaRepository extends JpaRepository<Conta, Long>{
-	
-	 public Conta findByNumeroConta(String numeroConta);
+public interface ContaRepository extends JpaRepository<Conta, Long> {
+
+	public Conta findByNumeroConta(String numeroConta);
 }

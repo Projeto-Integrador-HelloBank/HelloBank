@@ -34,7 +34,7 @@ public class ContaService {
 	public void atualizarSaldo(Conta contaOrigem, Conta contaDestino, BigDecimal valor) {
 
 		if (contaOrigem != null) {
-			if (contaOrigem.getSaldo().compareTo(valor) >= 0 ) {
+			if (contaOrigem.getSaldo().compareTo(valor) >= 0) {
 				contaOrigem.setSaldo(contaOrigem.getSaldo().subtract(valor));
 			}
 
@@ -44,23 +44,24 @@ public class ContaService {
 			}
 			contaRepository.save(contaOrigem);
 		}
-		
+
 		if (contaDestino != null) {
-            contaDestino.setSaldo(contaDestino.getSaldo().add(valor));
-            contaRepository.saveAndFlush(contaDestino);
-        }
+			contaDestino.setSaldo(contaDestino.getSaldo().add(valor));
+			contaRepository.saveAndFlush(contaDestino);
+		}
 	}
 
-//	public Conta mudaSaldo(String numeroConta,String tipoTransacao, BigDecimal saldo) {
-//		Conta conta = buscarNumeroConta(numeroConta);
-//		if (conta != null) {
-//			if (tipoTransacao.equals("deposito")) {
-//				conta.setSaldo(conta.getSaldo().add(new BigDecimal(numeroConta)));
-//			} else if (tipoTransacao.equals("saque")) {
-//				conta.setSaldo(conta.getSaldo().subtract(new BigDecimal(numeroConta)));
-//			}
-//			contaRepository.save(conta);
-//		}
-//		return conta;
-//	}
+	// public Conta mudaSaldo(String numeroConta,String tipoTransacao, BigDecimal
+	// saldo) {
+	// Conta conta = buscarNumeroConta(numeroConta);
+	// if (conta != null) {
+	// if (tipoTransacao.equals("deposito")) {
+	// conta.setSaldo(conta.getSaldo().add(new BigDecimal(numeroConta)));
+	// } else if (tipoTransacao.equals("saque")) {
+	// conta.setSaldo(conta.getSaldo().subtract(new BigDecimal(numeroConta)));
+	// }
+	// contaRepository.save(conta);
+	// }
+	// return conta;
+	// }
 }
