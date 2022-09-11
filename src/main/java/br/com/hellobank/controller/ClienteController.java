@@ -84,5 +84,6 @@ public class ClienteController {
 		clienteService.deletar(id);
 		
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-	}
-}
+	}}
+	
+	

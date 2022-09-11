@@ -16,9 +16,13 @@ class ClienteRepositoryTest {
 
 	@Autowired
 	private ClienteRepository repository;
+	
+	
 	@Test
  	public void clienteCPF() {
- 		String clienteCPF = "23.456.789-00";
+		
+
+ 		String clienteCPF = "13254678915";
  		Cliente cliente = repository.findByCpf(clienteCPF);
  		Assert.assertNotNull(cliente);
  		Assert.assertEquals (clienteCPF, cliente.getCpf());
@@ -28,8 +32,7 @@ class ClienteRepositoryTest {
  	public void clienteCPFErrado() {
  		String clienteCPF = "23.555.789-00";
  		Cliente cliente = repository.findByCpf(clienteCPF);
- 		Assert.assertNotNull(cliente);
- 		Assert.assertEquals (clienteCPF, cliente.getCpf());
+ 		Assert.assertNull(cliente);
  	}
 	}
 

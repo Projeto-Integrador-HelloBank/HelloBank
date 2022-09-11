@@ -1,7 +1,3 @@
-create database db_hellobank;
-
-use db_hellobank;
-
 create table tb_cliente(
 id int auto_increment,
 nome varchar(100) not null,
@@ -41,8 +37,3 @@ foreign key(conta_destino) references tb_conta(codigo)
 insert into tb_cliente(nome, cpf_cnpj) values ("Ronaldo Alves", "132.546.789-15"), ("Acervo de Condes", "156.489.785-15"), ("Dantas Vieiras", "456.845.897-42");
 insert into tb_conta(numero_conta, agencia, saldo, data_criacao, cliente_id) values ("123456", "1234", 1500.00, "09-15-2022", 1), ("145678", "4567", 2000.00, "09-15-2022", 2),
 ("789452", "4869", 1200.00, "09-15-2022", 3);
-
-
-
-
-
