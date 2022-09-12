@@ -17,16 +17,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.hellobank.model.Cliente;
-import br.com.hellobank.service.ClienteServiceImpl;
+import br.com.hellobank.service.IClienteService;
 
 @RestController
 @RequestMapping("/cliente")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ClienteController {
 
-	private ClienteServiceImpl clienteService;
+	private IClienteService clienteService;
 	
-	public ClienteController(ClienteServiceImpl clienteService) {
+	public ClienteController(IClienteService clienteService) {
 		this.clienteService = clienteService;
 	}
 
@@ -45,7 +45,7 @@ public class ClienteController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Cliente> buscarPorId(@PathVariable Long id) {
 
-		if (clienteService.existeId(id)) {
+		if (!clienteService.existeId(id)) {
 
 			return ResponseEntity.notFound().build();
 		}
@@ -57,7 +57,7 @@ public class ClienteController {
 	@GetMapping("/cpf/{cpf}")
 	public ResponseEntity<Cliente> buscarPorCpf(@PathVariable String cpf) {
 
-		if (clienteService.existeCpf(cpf)) {
+		if (!clienteService.existeCpf(cpf)) {
 			return ResponseEntity.notFound().build();
 		}
 		
@@ -76,7 +76,7 @@ public class ClienteController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> deletar(@PathVariable Long id) {
 		
-		if (clienteService.existeId(id)) {
+		if (!clienteService.existeId(id)) {
 
 			return ResponseEntity.notFound().build();
 		}

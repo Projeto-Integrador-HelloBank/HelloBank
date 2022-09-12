@@ -27,7 +27,7 @@ public class Cliente {
 
 	@CPF(message = "CPF inválido")
 	@NotBlank(message = "CPF é obrigatório")
-	@Size(min = 10, max = 20, message = "O cpf ou cnpj deve possuir entre 10 a 20 caracteres")
+	@Size(min = 10, max = 20, message = "O cpf deve possuir entre 10 a 20 caracteres")
 	@Column(name = "cpf", unique = true)
 	private String cpf;
 

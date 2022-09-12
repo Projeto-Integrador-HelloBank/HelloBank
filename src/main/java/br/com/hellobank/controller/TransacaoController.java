@@ -18,16 +18,16 @@ import br.com.hellobank.dto.DepositoDTO;
 import br.com.hellobank.dto.SaqueDTO;
 import br.com.hellobank.dto.TransferenciaDTO;
 import br.com.hellobank.model.Transacao;
-import br.com.hellobank.service.TransacaoServiceImpl;
+import br.com.hellobank.service.ITransacaoService;
 
 @RestController
 @RequestMapping("/transacao")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TransacaoController {
 
-	private TransacaoServiceImpl transacaoService;
+	private ITransacaoService transacaoService;
 	
-	public TransacaoController(TransacaoServiceImpl transacaoService) {
+	public TransacaoController(ITransacaoService transacaoService) {
 		this.transacaoService = transacaoService;
 	}
 
@@ -39,7 +39,7 @@ public class TransacaoController {
 	@GetMapping("/{codigo}")
 	public ResponseEntity<Transacao> buscarPorCodigo(@PathVariable Long codigo) {
 
-		if (transacaoService.existeCodigo(codigo)) {
+		if (!transacaoService.existeCodigo(codigo)) {
 
 			return ResponseEntity.notFound().build();
 		}

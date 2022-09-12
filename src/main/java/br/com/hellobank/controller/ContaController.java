@@ -14,16 +14,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.hellobank.model.Conta;
-import br.com.hellobank.service.ContaServiceImpl;
+import br.com.hellobank.service.IContaService;
 
 @RestController
 @RequestMapping("/conta")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ContaController {
 
-	private ContaServiceImpl contaService;
+	private IContaService contaService;
 	
-	public ContaController(ContaServiceImpl contaService) {
+	public ContaController(IContaService contaService) {
 		this.contaService = contaService;
 	}
 
