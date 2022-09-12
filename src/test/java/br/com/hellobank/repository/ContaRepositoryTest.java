@@ -16,7 +16,6 @@ import br.com.hellobank.model.Conta;
 @DataJpaTest
 class ContaRepositoryTest {
 
-	
 	@Autowired
     private ContaRepository sobreTeste;
 
@@ -39,6 +38,27 @@ class ContaRepositoryTest {
 
         // entao
         assertThat(numeroConta).isEqualTo(esperado.getNumeroConta());
+    }
+
+    @Test
+    void deveriaVerificarSeContaNaoExitePeloNumeroConta() {
+        
+        // dado
+        String numeroConta = "123456789";
+        Conta conta = new Conta();
+
+        conta.setTipoConta("Poupança");
+        conta.setNumeroConta("36452");
+        conta.setAgencia("4567");
+        conta.setSaldo(new BigDecimal(1500.00));
+
+        sobreTeste.save(conta);
+
+        // quando
+        Conta esperado = sobreTeste.findByNumeroConta("36452");
+
+        // entao
+        assertThat(numeroConta).isNotEqualTo(esperado.getNumeroConta());
     }
 	
 }

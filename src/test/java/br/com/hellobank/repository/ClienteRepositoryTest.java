@@ -17,32 +17,28 @@ class ClienteRepositoryTest {
 
   @Test
   public void clienteCPF() {
-
     String clienteCpf = "796.881.490-12";
 
     Cliente clienteA = new Cliente();
-		clienteA.setNome("Spring");
-		clienteA.setCpf(clienteCpf);
-		clienteA.setEndereco("rua 20 oloko meu ");
-		clienteA.setCidade("catalao");
-		clienteA.setEstado("GO");
-		clienteA.setEmail("spring@tudodebom.com");
-		clienteA.setTelefone("+55(00)11111-1111");
-	
+    clienteA.setNome("Spring");
+    clienteA.setCpf(clienteCpf);
+    clienteA.setEndereco("rua 20 oloko meu ");
+    clienteA.setCidade("catalao");
+    clienteA.setEstado("GO");
+    clienteA.setEmail("spring@tudodebom.com");
+    clienteA.setTelefone("+55(00)11111-1111");
+
     sobreTeste.save(clienteA);
 
     Cliente cliente = sobreTeste.findByCpf(clienteCpf);
     Assert.assertNotNull(cliente);
     Assert.assertEquals(clienteCpf, cliente.getCpf());
-
   }
-
 
   @Test
   public void clienteCPFErrado() {
-
     String clienteCPF = "23.555.789-00";
-    
+
     Cliente cliente = sobreTeste.findByCpf(clienteCPF);
     Assert.assertNull(cliente);
   }
