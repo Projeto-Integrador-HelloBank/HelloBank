@@ -51,7 +51,6 @@ public class ClienteController {
 		}
 		
 		return ResponseEntity.status(HttpStatus.OK).body(clienteService.buscarPorId(id));
-
 	}
 
 	@GetMapping("/cpf/{cpf}")
