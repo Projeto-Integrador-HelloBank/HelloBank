@@ -1,11 +1,11 @@
 package br.com.hellobank.repository;
 
-// import static org.junit.Assert.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
+
 import java.math.BigDecimal;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
@@ -16,6 +16,11 @@ class ContaRepositoryTest {
 
 	@Autowired
     private ContaRepository sobreTeste;
+
+    @AfterEach
+    void destruir() {
+        sobreTeste.deleteAll();
+    }
 
     @Test
     void deveriaVerificarSeContaExitePeloNumeroConta() {
