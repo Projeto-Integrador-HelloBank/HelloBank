@@ -21,7 +21,7 @@ public class ClienteRepositoryTest {
     }
 
     @Test
-    public void deveriaVerificarSeCpfClienteExiste() {
+    public void deveriaVerificarSeExisteClienteBuscandoPorCpf() {
 
         // dado
         String clienteCpf = "796.881.490-12";
@@ -45,7 +45,7 @@ public class ClienteRepositoryTest {
     }
 
     @Test
-    public void deveriaVerificarSeCpfClienteNaoExiste() {
+    public void deveriaVerificarSeNaoExisteClienteBuscandoPorCpf() {
 
         // dado
         String clienteCpf = "171.866.330-72";
