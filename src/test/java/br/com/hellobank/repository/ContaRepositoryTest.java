@@ -8,11 +8,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import br.com.hellobank.model.Conta;
 
-@RunWith(SpringRunner.class)
 @DataJpaTest
 class ContaRepositoryTest {
 
@@ -37,7 +35,7 @@ class ContaRepositoryTest {
         Conta esperado = sobreTeste.findByNumeroConta(numeroConta);
 
         // entao
-        assertThat(numeroConta).isEqualTo(esperado.getNumeroConta());
+        assertThat(esperado).isEqualTo(conta);
     }
 
     @Test
@@ -45,20 +43,12 @@ class ContaRepositoryTest {
         
         // dado
         String numeroConta = "123456789";
-        Conta conta = new Conta();
-
-        conta.setTipoConta("Poupança");
-        conta.setNumeroConta("36452");
-        conta.setAgencia("4567");
-        conta.setSaldo(new BigDecimal(1500.00));
-
-        sobreTeste.save(conta);
 
         // quando
-        Conta esperado = sobreTeste.findByNumeroConta("36452");
+        Conta esperado = sobreTeste.findByNumeroConta(numeroConta);
 
         // entao
-        assertThat(numeroConta).isNotEqualTo(esperado.getNumeroConta());
+        assertThat(esperado).isNull();
     }
 	
 }
