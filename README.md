@@ -28,3 +28,27 @@ Esse projeto consiste em uma API para gerenciar as transações de um banco fict
 - [X] A aplicação precisa ser configurada no API Gateway da AWS.
 - [X] A aplicação precisa ter no mínimo um endpoint de SNS para cadastro de emails e verificação automática.
 - [X] A aplicação precisa ter no mínimo um Lambda.
+<br/><hr>
+<h2 id="endpoints">Endpoints</h2>
+<p>
+API pode ser acessada por meio de URL que executa a função escolhida quando chamada. Sendo assim, cada endpoint listado abaixo, executa um determinado trecho de código.
+</p>
+<h4 align="center"> Endpoints - Cliente:</h4>
+***[GET]*** Listar Clientes:
+```
+http://localhost:8080/cliente
+```
+##### Exemple Request
+curl --location --request GET 'http://localhost:8080/cliente' \
+--data-raw '{
+"tipoConta": "Poupança",
+"numeroConta": "123456789",
+"agencia": "1234",
+"saldo": 1500.00,
+ "cliente":{
+  "id": 9
+  }
+
+}'
+
+<br>
