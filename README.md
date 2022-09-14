@@ -20,3 +20,11 @@ Esse projeto consiste em uma API para gerenciar as transações de um banco fict
          <br>-O código deve ser entregue em um repositório no Github.
 - [X]Liste os endpoints no README.md
  
+<h3 id="RQEntrega">Opcionais</h3>
+
+- [X] Testes automatizados, podem ser testes unitários ou testes de integração.
+- [X] A API deve ser disponibilizada em ambiente AWS com EC2 e em Beanstalk .
+- [X] A aplicação deve ter um pipeline em Jenkins ou no Aws Build.
+- [X] A aplicação precisa ser configurada no API Gateway da AWS.
+- [X] A aplicação precisa ter no mínimo um endpoint de SNS para cadastro de emails e verificação automática.
+- [X] A aplicação precisa ter no mínimo um Lambda.
