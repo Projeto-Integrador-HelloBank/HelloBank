@@ -17,8 +17,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import br.com.hellobank.exception.ClienteNotFoundException;
 import br.com.hellobank.model.Cliente;
 import br.com.hellobank.repository.ClienteRepository;
 import br.com.hellobank.service.IClienteService;
@@ -114,7 +114,7 @@ class ClienteControllerTest {
 		clienteC.setTelefone("+55(00)13333-3333");
 
 		// quando
-		Mockito.when(clienteService.existeId(clienteC.getId())).thenReturn(true);
+		// Mockito.when(clienteService.existeId(clienteC.getId())).thenReturn(true);
 		Mockito.when(clienteService.buscarPorId(clienteC.getId())).thenReturn(clienteC);
 		
 		// entao
@@ -141,7 +141,8 @@ class ClienteControllerTest {
 		clienteC.setTelefone("+55(00)13333-3333");
 
 		// quando
-		Mockito.when(clienteService.existeId(clienteC.getId())).thenReturn(false);
+		Mockito.when(clienteService.buscarPorId(clienteC.getId()))
+            .thenThrow(new ClienteNotFoundException(clienteC.getId()));
 		
 		// entao
 		mockMvc.perform(MockMvcRequestBuilders.get("/cliente/{id}", clienteC.getId())
@@ -149,5 +150,4 @@ class ClienteControllerTest {
 				.andExpect(status().isNotFound());
 	}
 	
-
 }

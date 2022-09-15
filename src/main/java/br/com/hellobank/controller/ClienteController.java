@@ -20,7 +20,7 @@ import br.com.hellobank.model.Cliente;
 import br.com.hellobank.service.IClienteService;
 
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping(path = "/cliente")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ClienteController {
 
@@ -30,7 +30,7 @@ public class ClienteController {
 		this.clienteService = clienteService;
 	}
 
-	@PostMapping("/cadastrar")
+	@PostMapping(path = "/cadastrar")
 	public ResponseEntity<Cliente> salvar(@Valid @RequestBody Cliente cliente) {
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(clienteService.salvar(cliente));
@@ -42,44 +42,27 @@ public class ClienteController {
 		return ResponseEntity.status(HttpStatus.OK).body(clienteService.listarTodos());
 	}
 
-	@GetMapping("/{id}")
-	public ResponseEntity<Cliente> buscarPorId(@PathVariable Long id) {
+	@GetMapping(path = "{id}")
+	public ResponseEntity<Cliente> buscarPorId(@PathVariable("id") Long id) {
 
-		if (!clienteService.existeId(id)) {
-
-			return ResponseEntity.notFound().build();
-		}
-		
 		return ResponseEntity.status(HttpStatus.OK).body(clienteService.buscarPorId(id));
 	}
 
-	@GetMapping("/cpf/{cpf}")
-	public ResponseEntity<Cliente> buscarPorCpf(@PathVariable String cpf) {
-
-		if (!clienteService.existeCpf(cpf)) {
-			return ResponseEntity.notFound().build();
-		}
+	@GetMapping(path = "/cpf/{cpf}")
+	public ResponseEntity<Cliente> buscarPorCpf(@PathVariable("cpf") String cpf) {
 		
 		return ResponseEntity.status(HttpStatus.OK).body(clienteService.buscarPorCpf(cpf));
-
 	}
 
-	@PutMapping("/atualizar")
+	@PutMapping(path = "/atualizar")
 	public ResponseEntity<Cliente> atualizar(@RequestBody Cliente cliente) {
-
-		Cliente clienteSalvo = clienteService.salvar(cliente);
 		
-		return ResponseEntity.status(HttpStatus.OK).body(clienteSalvo);
+		return ResponseEntity.status(HttpStatus.OK).body(clienteService.salvar(cliente));
 	}
 
-	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> deletar(@PathVariable Long id) {
-		
-		if (!clienteService.existeId(id)) {
-
-			return ResponseEntity.notFound().build();
-		}
-		
+	@DeleteMapping(path = "/{id}")
+	public ResponseEntity<Void> deletar(@PathVariable("id") Long id) {
+			
 		clienteService.deletar(id);
 		
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
