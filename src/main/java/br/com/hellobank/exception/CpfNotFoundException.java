@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class CpfNotFoundException extends RuntimeException{
     
-    public CpfNotFoundException(String cpf) {
+	private static final long serialVersionUID = 1L;
+
+	public CpfNotFoundException(String cpf) {
         super("Cliente com cpf " + cpf + " não existe.");
     }
 }

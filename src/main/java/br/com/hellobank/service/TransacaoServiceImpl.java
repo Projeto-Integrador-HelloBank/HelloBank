@@ -25,20 +25,6 @@ public class TransacaoServiceImpl implements ITransacaoService {
 		this.transacaoRepository = transacaoRepository;
 	}
 
-	// public Transacao transacao(MovimentacaoDepositoDTO transacao) {
-	// Conta origem = buscarConta(transacao.getContaOrigem());
-	// Conta destino = buscarConta(transacao.getContaDestino());
-	//
-	// contaService.atualizarSaldo(origem, destino, transacao.getValorTransacao(),
-	// transacao.getTipo().toString());
-	//
-	// Transacao movimentacao = new Transacao();
-	// movimentacao.setValorTransacao(transacao.getValorTransacao());
-	// movimentacao.setContaOrigem(origem);
-	// movimentacao.setContaDestino(destino);
-	// return movimentacao;
-	// }
-
 	public List<Transacao> listarTodos() {
 
 		return transacaoRepository.findAll();
