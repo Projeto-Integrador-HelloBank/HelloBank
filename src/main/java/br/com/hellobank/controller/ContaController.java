@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,20 +40,8 @@ public class ContaController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(contaService.criar(conta));
 	}
 
-	//
-	// @PutMapping("{numero}/deposito/{valor}")
-	// public ResponseEntity<Conta> deposito(@PathVariable String numero,
-	// @PathVariable BigDecimal valor) {
-	// service.mudaSaldo(numero, "deposito", valor);
-	// service.buscarNumeroConta(numero);
-	// return ResponseEntity.status(HttpStatus.OK).build();
-	// }
-	//
-	// @PutMapping("{numero}/saque/{valor}")
-	// public ResponseEntity<Conta> saque(@PathVariable String numero, @PathVariable
-	// BigDecimal valor) {
-	// service.mudaSaldo(numero, "saque", valor);
-	// service.buscarNumeroConta(numero);
-	// return ResponseEntity.status(HttpStatus.OK).build();
-	// }
+	@GetMapping("numero-conta/{numeroConta}")
+	public ResponseEntity<Conta> buscarPorNumeroConta(@PathVariable String numeroConta){
+		return ResponseEntity.ok(contaService.buscarNumeroConta(numeroConta));
+	}
 }

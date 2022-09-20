@@ -36,6 +36,7 @@ public class TransacaoController {
 		return ResponseEntity.ok(transacaoService.listarTodos());
 	}
 
+
 	@GetMapping("/{codigo}")
 	public ResponseEntity<Transacao> buscarPorCodigo(@PathVariable Long codigo) {
 
@@ -47,6 +48,7 @@ public class TransacaoController {
 		return ResponseEntity.status(HttpStatus.OK).body(transacaoService.buscarPorCodigo(codigo));
 
 	}
+
 
 	@PostMapping("/transferencia")
 	public ResponseEntity<Transacao> fazerTransferencia(@RequestBody @Valid TransferenciaDTO transferencia) {

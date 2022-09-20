@@ -109,7 +109,7 @@ http://localhost:8080/cliente/atualizar
 
 ***[DEL]*** Deletar ID Cliente:
 ```
-http://localhost:8080/cliente/atualizar
+http://localhost:8080/cliente/9
 ```
 ##### Exemple Request
     curl --location --request DELETE 'http://localhost:8080/cliente/9'

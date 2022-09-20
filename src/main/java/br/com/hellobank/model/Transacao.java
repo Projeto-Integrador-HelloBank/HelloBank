@@ -58,10 +58,6 @@ public class Transacao implements Serializable {
 		return codigo;
 	}
 
-//	public void setCodigo(long codigo) {
-//		this.codigo = codigo;
-//	}
-
 	public TipoMovimentacao getTipoTransacao() {
 		return tipoTransacao;
 	}
