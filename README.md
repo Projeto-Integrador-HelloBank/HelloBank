@@ -228,7 +228,32 @@ http://localhost:8090/transacao/deposito
 
 
 
-
+<p align="right"><a href="#topo">Você pode voltar ao topo clicando aqui ↑</a></p>
+<h3 id="tecnologias">Ferramentas e tecnologias utilizadas</h3>
+<div id="tecnologias" style="display: inline_block" align="center"><br>
+    <a href="https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html">
+        <img align="center" alt="Java" title="Java 18" height="80px" width="90px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg"/>
+    </a>
+    <a href="https://spring.io/tools#suite-three">
+        <img align="center" alt="Spring-Boot-Tools" title="Spring Boot Tools" height="80px" width="90px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"/>
+    </a>
+    <a href="https://www.mysql.com/">
+        <img align="center" alt="MySql" title="MySql" height="80px" width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/>
+    </a>
+   <a href="https://aws.amazon.com/pt/lambda/">
+        <img align="center" alt="AWS - Lambda" title="AWS - Lambda" height="80px" width="80px" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Amazon_Lambda_architecture_logo.png"/>
+    </a>
+    <a href="https://www.docker.com/get-started">
+    <img align="center" alt="Docker" title="Docker" height="90px" width="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/> 
+    </a>
+    <a href="https://www.jenkins.io/download/">
+        <img align="center" alt="Jenkins" title="Jenkins" height="80px" width="90px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"/>
+    <a href="https://www.postman.com/downloads/">
+        <img align="center" alt="Postman" title="Postman" height="80px" width="90px" src="https://user-images.githubusercontent.com/2676579/34940598-17cc20f0-f9be-11e7-8c6d-f0190d502d64.png"/>
+    <a href="https://git-scm.com/">
+        <img align="center" alt="Git" title="Git" height="80px" width="90px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+    </a>
+</div>
 
 <h3 id="agradecimentos">Agradecimentos</h3>
 Agradecemos ao IBM e toda a equipe e suporte da Gama Academy pela iniciativa do projeto if (black) { code( ) }, que possibilitou uma nova jornada de conhecimento a todos os selecionados. A todos os mentores que dedicaram um pouco do seu tempo compartilhando conhecimentos e experiências conosco. Aos nossos colegas de classe. E por último, aos membros da nossa Squad, sem nenhum de nós, esse projeto não seria possível.
