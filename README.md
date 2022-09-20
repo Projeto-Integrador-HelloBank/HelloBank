@@ -225,3 +225,110 @@ http://localhost:8090/transacao/deposito
     O Postman é uma ferramenta que dá suporte à documentação das requisições feitas pela API. Ele possui ambiente para a documentação, execução de testes de APIs e requisições em geral. 
     Disponibilizamos um <a href= "https://documenter.getpostman.com/view/14129628/VVHx2dei#f1f84850-2599-4a39-9204-71c104c546ca">LINK</a> onde estão disponíveis requisições para testar a aplicação.
 </p>
+
+
+
+
+
+<h3 id="agradecimentos">Agradecimentos</h3>
+Agradecemos ao IBM e toda a equipe e suporte da Gama Academy pela iniciativa do projeto if (black) { code( ) }, que possibilitou uma nova jornada de conhecimento a todos os selecionados. A todos os mentores que dedicaram um pouco do seu tempo compartilhando conhecimentos e experiências conosco. Aos nossos colegas de classe. E por último, aos membros da nossa Squad, sem nenhum de nós, esse projeto não seria possível.
+
+<h3 id="squad">Nós somos a Squad MEIDIA...</h3>
+Você pode ver mais acerca do nosso desenvolvimento através dos repositórios contidos no GitHub e nos contatar pelo linkedin. Agradecemos desde já o tempo que você dedicou a leitura deste arquivo.😄
+<br><br>
+	
+<a href="https://storyset.com/work">
+   <img src="https://lh3.googleusercontent.com/8KFjBDCqD1-Ss8vhhPpX63YOFWHIVHs48-UcbdkXqVWimQmwYKR7jOG0mLvATg-ZVDGmygXOkLY7VY2SRc0IgscGzmxTdvohVCRZKFQwYJVSOWnM8WFH8tsRIbYNXF71ixNMc3PNdxXFpALUIr8i4AcqzNtYbaI-KzEXnjuVWrwC19vDUzrrVAS8qnYLs_9SusIj8BYMD8tK50RnaGsHG826-CaksfY8XDxiTjxCLLV_mDyP0FWHpO536IysOqwSS70foSFuudQsrHJnyVRAOWvtWd4N5Lun9rsrR7m9PSVER5gvZZKwIDlZvuVQi4cqs-lTY1pF2B0XAfRrhHYqDdrCnMt0AXKKX7z6QbQx4YpvtGXXbumKKgbM_Wd3THPQSEu5InRLCFu_YfL1uJDKXfnotB_s9AESniW3w8vvVyykXkA2HD1H6_FezA2EE3svWF_c4BXSKhnqZ3eh-Yt_8kLGFoWUjhu_lCpBS4ObK_y1hEV-EgMKzk6jB3__y2Pg_tUxop6-5ja98ibvhxR6R3nIAykMn1t7dsTnIzLJUvw9qIT-CM-8mQvAGV5UEckTRcXbTgG0N6SfxNxOQBJiNRSv3Q2rDoYb2fPyBEjTukRav7frUS6BUJcbIussb2WIe0A83nFKHQKh3GXkla-N2AD1AHBZa26JZROLq9hXpr_a7dOw_PT3TTYS5FuIiuMgImg07VPigf_yRzYsWImoreelkJTijOfh3Vg38stu4t_HqQkO2MBdJiRy1R8PPJJUMgdSBgRcQaNAJBNfK_w1cvizT674LdQBKUYfA-sirG6cL2F1aqSFU1QxWaAXYB6kNHn7xrvt1l7UwYppmL24s_yELCGypdpqeHDTmnuWNHX3izb38xhBUwp0Qrg_hfUxB9J4OivJyFrcsvWLM9pd3eLA5sxT8GOPknsFf45iQw=s872-no?authuser=0" min-width="350px" max-width="350px" width="350px" align="right"  alt="Work illustrations by Storyset">
+</a>
+<table width="40%">
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQG9Vs-R_onpYQ/profile-displayphoto-shrink_800_800/0/1637952264056?e=1668643200&v=beta&t=0zR500-9XV2HSqqpl7Y4fIWsi4Tv5Rtq7S3V_muM82E" alt="Foto Alexandre" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/alexandreps1123">
+                <img src="https://img.shields.io/badge/%20Alexandre%20%20%20%20%20%20%20%20%20Ferreira%20-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/alexandreps1123/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/%20Alexandre%20%20%20%20%20%20%20%20%20Ferreira%20-0077B5?style=social&logo=linkedin&logoColor=00C6FF&" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGe7HUqViF2tQ/profile-displayphoto-shrink_800_800/0/1636035943602?e=1668643200&v=beta&t=PSK2nweWJIReCjNG0JwWIhemahcdHao2-9JIZq5i1-w" alt="Foto Euritales" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/euritales">
+                <img src="https://img.shields.io/badge/%20Euritales(Tales)%20%20%20%20%20%20%20%20%20Silva%20-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/euritales/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/%20Euritales(Tales)%20%20%20%20%20%20%20%20%20Silva%20-0077B5?style=social&logo=linkedin&logoColor=00C6FF&" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/D4E35AQFswrCcE3nfkg/profile-framedphoto-shrink_800_800/0/1641248734714?e=1664046000&v=beta&t=0k9xbfqlzigVhtdPAO6wam8rc8Mt3aiVUhrcGgAtXG8" alt="Foto Gerson" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/GersonRYE">
+                <img src="https://img.shields.io/badge/Gerson%20Ronaldo-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/gerson-ronaldo-011282220/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/Gerson%20Ronaldo-0077B5?style=social&logo=linkedin&logoColor=00C6FF" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://avatars.githubusercontent.com/u/68935244?s=400&u=60e3df703d368ccfafb34e5bbce49fc5807c89f4&v=4" alt="Foto Laryssa Peçanha" height="70px" style="border-radius:10px text-align: center;">
+        </td>
+        <td align="center">
+            <a href="https://github.com/laryscampark">
+                <img src="https://img.shields.io/badge/Laryssa%20%20%20%20Peçanha-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/laryssape%C3%A7anha/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/Laryssa%20%20%20%20%20Peçanha-0077B5?style=social&logo=linkedin&logoColor=00C6FF" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/C5603AQENlBdCKpmINw/profile-displayphoto-shrink_800_800/0/1606437368461?e=1668643200&v=beta&t=K7aVKgHLHs3fbXmIy6xAeExxHywR0z8w5oWnw07vevU" alt="Foto Wegelys Ferreira Alves" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/Wegelys">
+                <img src="https://img.shields.io/badge/Wegelys%20%20%20%20Ferreira Alves-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/wegelys-ferreira-alves-8a3b10200/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/Wegelys%20%20%20%20%20Ferreira Alves-0077B5?style=social&logo=linkedin&logoColor=00C6FF" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQEl1PalWThpYg/profile-displayphoto-shrink_800_800/0/1642071666024?e=1668643200&v=beta&t=6IqZnZdJUs-0CwyNAfDf_yiCZyZk8DfJbaVoGh13CL0" alt="Foto Wendel" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/dantaswendel">
+                <img src="https://img.shields.io/badge/%20Wendel%20%20%20%20%20Dantas%20%20-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/wendel-dantas-lima-5104b0166/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/%20Wendel%20%20%20%20%20%20Dantas%20%20-0077B5?style=social&logo=linkedin&logoColor=00C6FF" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+</table>
+<p align="right"><a href="#topo">Você pode voltar ao topo clicando aqui ↑</a></p>
