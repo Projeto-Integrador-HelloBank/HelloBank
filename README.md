@@ -3,32 +3,53 @@
 <h1 align="center" id="topo">Olá, seja bem vindo(a) à API Hellobank</h1>
 Esse projeto consiste em uma API para gerenciar as transações de um banco fictício utilizando Java, MySQL e AWS. Efetuamos a aplicação por meio de Spring Boot, usando Maven com CRUD e dividimos as funções em microserviços. Para o banco de dados utilizamos o MySql com deploy no Docker e pipeline em Jenkins.
 
-<h3 id="RQEntrega">Requisitos de Entrega</h3>
+<hr>
 
-- [X] Metodologias Ágeis:
+
+<h2 align="center" id="requisitos">Entregas Minímas</h2>
+<h3 id="RQEntrega"> - Metodologias Ágeis</h3>
+
 - [X] Kanban com todas as tarefas organizadas e responsáveis definidos.
-- [X] Back-end:
-       <br> -Cadastro de clientes
-        <br> -Listagem de clientes
-        <br> -Atualização de clientes
-       <br> -Deletar clientes
-         <br> -Histórico de transações entre contas
-- [X] Banco de Dados:
-         <br> -Tabelas bem estruturadas e populadas com valores para testes.
-         <br>-O Banco deve ser entregue em script SQL junto ao repositório.
-- [X] Gerais:
-         <br>-O código deve ser entregue em um repositório no Github.
-- [X]Liste os endpoints no README.md
- 
-<h3 id="RQEntrega">Opcionais</h3>
+<h3 id="RQEntrega"> - Back-end: </h3>
 
-- [X] Testes automatizados, podem ser testes unitários ou testes de integração.
-- [X] A API deve ser disponibilizada em ambiente AWS com EC2 e em Beanstalk .
+- [X] Cadastro de clientes;
+- [X] Listagem de clientes;
+- [X] Atualização de clientes;
+- [X] Histórico de transações entre contas;
+- [X] Deletar Clientes;
+
+<h3 id="RQEntrega"> - Banco de Dados</h3>
+
+- [X] Tabelas bem estruturadas e populadas com valores para testes.
+- [X]  O Banco deve ser entregue em script SQL junto ao repositório.
+
+<h3 id="RQEntrega"> - Geral </h3>
+
+- [X] O código deve ser entregue em um repositório no Github.
+- [X] A API deve ser disponibilizada em ambiente AWS com EC2 e em Beanstalk.
 - [X] A aplicação deve ter um pipeline em Jenkins ou no Aws Build.
 - [X] A aplicação precisa ser configurada no API Gateway da AWS.
-- [X] A aplicação precisa ter no mínimo um endpoint de SNS para cadastro de emails e verificação automática.
+- [X] A aplicação precisa ter no mínimo um endpoint de SNS para cadastro de
+emails e verificação automática.
 - [X] A aplicação precisa ter no mínimo um Lambda.
+- [X] Liste os endpoints no README.md
+
+<h3 id="RQEntrega"> - Entrega Opcional </h3>
+
+- [ ] Testes automatizados, podem ser testes unitários ou testes de integração.
+
+
+<h2 align="center" id="requisitos">Requisitos e Funcionalidades</h2>
+
+- [X] Testes automatizados, podem ser testes unitários ou testes de integração;
+- [X] A API deve ser disponibilizada em ambiente AWS com EC2 e em Beanstalk;
+- [X] A aplicação deve ter um pipeline em Jenkins ou no Aws Build;
+- [X] A aplicação precisa ser configurada no API Gateway da AWS;
+- [X] A aplicação precisa ter no mínimo um endpoint de SNS para cadastro de emails e verificação automática;
+- [X] A aplicação precisa ter no mínimo um Lambda;
+
 <br/><hr>
+
 <h2 id="endpoints">Endpoints</h2>
 <p>
     API pode ser acessada por meio de URL que executa a função escolhida quando chamada. Sendo assim, cada endpoint listado abaixo, executa um determinado trecho de código.
@@ -38,10 +59,10 @@ Esse projeto consiste em uma API para gerenciar as transações de um banco fict
 
 ***[GET]*** Listar Clientes:
 ```
-http://localhost:8080/cliente
+http://localhost:8090/cliente
 ```
 ##### Exemple Request
-    curl --location --request GET 'http://localhost:8080/cliente' \
+    curl --location --request GET 'http://localhost:8090/cliente' \
     --data-raw '{
         "tipoConta": "Poupança",
         "numeroConta": "123456789",
@@ -56,27 +77,27 @@ http://localhost:8080/cliente
 
 ***[GET]*** Buscar ID Cliente:
 ```
-http://localhost:8080/cliente/1
+http://localhost:8090/cliente/1
 ```
 ##### Exemple Request
-    curl --location --request GET 'http://localhost:8080/cliente/1'
+    curl --location --request GET 'http://localhost:8090/cliente/1'
 
 <br>
 
 ***[GET]*** Buscar CPF Cliente:
 ```
-http://localhost:8080/cliente/cpf/081.484.010-80
+http://localhost:8090/cliente/cpf/081.484.010-80
 ```
 ##### Exemple Request
-    curl --location --request GET 'http://localhost:8080/cliente/cpf/081.484.010-80'
+    curl --location --request GET 'http://localhost:8090/cliente/cpf/081.484.010-80'
 <br>
 
 ***[POST]*** Cadastrar cliente:
 ```
-http://localhost:8080/cliente/cadastrar
+http://localhost:8090/cliente/cadastrar
 ```
 ##### Exemple Request
-    curl --location --request POST 'http://localhost:8080/cliente/cadastrar' \
+    curl --location --request POST 'http://localhost:8090/cliente/cadastrar' \
     --data-raw '{
         "nome": "Gerson Ronaldo",
         "cpf": "951.947.570-26",
@@ -91,10 +112,10 @@ http://localhost:8080/cliente/cadastrar
 
 ***[PUT]*** Atualizar Cliente:
 ```
-http://localhost:8080/cliente/atualizar
+http://localhost:8090/cliente/atualizar
 ```
 ##### Exemple Request
-    curl --location --request PUT 'http://localhost:8080/cliente/atualizar' \
+    curl --location --request PUT 'http://localhost:8090/cliente/atualizar' \
     --data-raw '{
        "id": 1,
             "nome": "Gerson Ronaldo",
@@ -109,27 +130,27 @@ http://localhost:8080/cliente/atualizar
 
 ***[DEL]*** Deletar ID Cliente:
 ```
-http://localhost:8080/cliente/9
+curl --location --request DELETE 'http://localhost:8090/cliente/4'
 ```
 ##### Exemple Request
-    curl --location --request DELETE 'http://localhost:8080/cliente/9'
+    curl --location --request DELETE 'http://localhost:8090/cliente/9'
 <h4 align="center"> Endpoints - Conta:</h4>
 <br>
 
 ***[GET]*** Listar Contas:
 ```
-http://localhost:8080/conta
+http://localhost:8090/conta
 ```
 ##### Exemple Request
-    curl --location --request GET 'http://localhost:8080/conta'
+    curl --location --request GET 'http://localhost:8090/conta'
 <br>
 
 ***[POST]*** Cadastrar Contas:
 ```
-http://localhost:8080/conta/cadastrar
+http://localhost:8090/conta/cadastrar
 ```
 ##### Exemple Request
-    curl --location --request POST 'http://localhost:8080/conta/cadastrar' \
+    curl --location --request POST 'http://localhost:8090/conta/cadastrar' \
     --data-raw '{
         "tipoConta": "Poupança",
         "numeroConta": "123456789",
@@ -144,10 +165,10 @@ http://localhost:8080/conta/cadastrar
 
 ***[PUT]*** Transacao Deposito:
 ```
-http://localhost:8080/conta/1234/deposito/1000
+http://localhost:8090/conta/1234/deposito/1000
 ```
 ##### Exemple Request
-    curl --location --request PUT 'http://localhost:8080/conta/1234/deposito/1000' \
+    curl --location --request PUT 'http://localhost:8090/conta/1234/deposito/1000' \
     --data-raw ''
 
 <h4 align="center"> Endpoints - Transação:</h4>
@@ -155,18 +176,18 @@ http://localhost:8080/conta/1234/deposito/1000
  
 ***[GET]*** Historico Transações:
 ```
-http://localhost:8080/transacao
+http://localhost:8090/transacao
 ```
 ##### Exemple Request
-    curl --location --request GET 'http://localhost:8080/transacao'
+    curl --location --request GET 'http://localhost:8090/transacao'
 <br>
 
 ***[POST]*** Transferencia:
 ```
-http://localhost:8080/transacao/transferencia
+http://localhost:8090/transacao/transferencia
 ```
 ##### Exemple Request
-    curl --location --request POST 'http://localhost:8080/transacao/transferencia' \
+    curl --location --request POST 'http://localhost:8090/transacao/transferencia' \
     --data-raw '{
         "valorTransacao": 200.00,
         "contaOrigem": "789123456",
@@ -177,10 +198,10 @@ http://localhost:8080/transacao/transferencia
 
 ***[POST]*** Saque:
 ```
-http://localhost:8080/transacao/saque
+http://localhost:8090/transacao/saque
 ```
 ##### Exemple Request
-    curl --location --request POST 'http://localhost:8080/transacao/saque' \
+    curl --location --request POST 'http://localhost:8090/transacao/saque' \
     --data-raw '{
         "valorTransacao": 200.00,
         "contaOrigem": "789123456"
@@ -190,10 +211,10 @@ http://localhost:8080/transacao/saque
 
 ***[POST]*** Deposito:
 ```
-http://localhost:8080/transacao/deposito
+http://localhost:8090/transacao/deposito
 ```
 ##### Exemple Request
-    curl --location --request POST 'http://localhost:8080/transacao/deposito' \
+    curl --location --request POST 'http://localhost:8090/transacao/deposito' \
     --data-raw '{
         "valorTransacao": 200.00,
         "contaDestino": "789123456"
