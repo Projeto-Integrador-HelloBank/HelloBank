@@ -243,6 +243,14 @@ http://localhost:8090/transacao/deposito
 <p>
     Java é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems, que em 2008 foi adquirido pela empresa Oracle Corporation.  
 </p>
+<h2 id="ferramentas">MySQL</h2>
+<p>
+    O MySQL é um sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface. É atualmente um dos sistemas de gerenciamento de bancos de dados mais populares da Oracle Corporation, com mais de 10 milhões de instalações pelo mundo.  
+</p>
+<h2 id="ferramentas">AWS - Lambda</h2>
+<p>
+    AWS Lambda é um programa orientado a eventos, em computação sem servidor fornecido pela Amazon como uma parte da Amazon Web Services. É um serviço de computação que executa código em resposta a eventos e gerência automaticamente os recursos de computação exigidos por esse código. Foi anunciado em novembro de 2014.  
+</p>
 <p align="right"><a href="#topo">Você pode voltar ao topo clicando aqui ↑</a></p>
 <h3 id="tecnologias">Ferramentas e tecnologias utilizadas</h3>
 <div id="tecnologias" style="display: inline_block" align="center"><br>
