@@ -235,9 +235,13 @@ http://localhost:8090/transacao/deposito
 <p>
     Jenkins é um servidor de automação de código aberto. Ele ajuda a automatizar as partes do desenvolvimento de software relacionadas à construção, teste e implantação, facilitando a integração e a entrega contínuas. É um sistema baseado em servidor que é executado em contêineres de servlet, como o Apache Tomcat.
 </p>
-<h2 id="ferramentas">Jenkins</h2>
+<h2 id="ferramentas">SpringBoot</h2>
 <p>
-    Jenkins é um servidor de automação de código aberto. Ele ajuda a automatizar as partes do desenvolvimento de software relacionadas à construção, teste e implantação, facilitando a integração e a entrega contínuas. É um sistema baseado em servidor que é executado em contêineres de servlet, como o Apache Tomcat.
+    O Spring Boot é um framework Java open source que tem como objetivo facilitar esse processo em aplicações Java. Consequentemente, ele traz mais agilidade para o processo de desenvolvimento, uma vez que devs conseguem reduzir o tempo gasto com as configurações iniciais.  
+</p>
+<h2 id="ferramentas">Java</h2>
+<p>
+    Java é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems, que em 2008 foi adquirido pela empresa Oracle Corporation.  
 </p>
 <p align="right"><a href="#topo">Você pode voltar ao topo clicando aqui ↑</a></p>
 <h3 id="tecnologias">Ferramentas e tecnologias utilizadas</h3>
