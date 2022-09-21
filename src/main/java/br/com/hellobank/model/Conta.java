@@ -33,7 +33,7 @@ public class Conta {
 
 	@NotBlank(message = "Número da conta é obrigatório")
 	@Size(min = 2, max = 50, message = "O número da conta deve possuir entre 2 até 50 caracteres")
-	@Column(name = "numero_conta")
+	@Column(name = "numero_conta", unique = true)
 	private String numeroConta;
 
 	@NotBlank(message = "Número da agência é obrigatório")
