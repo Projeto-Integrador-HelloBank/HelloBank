@@ -226,7 +226,10 @@ http://localhost:8090/transacao/deposito
     Disponibilizamos um <a href= "https://documenter.getpostman.com/view/14129628/VVHx2dei#f1f84850-2599-4a39-9204-71c104c546ca">LINK</a> onde estão disponíveis requisições para testar a aplicação.
 </p>
 
-
+<h2 id="ferramentas">Docker</h2>
+<p>
+    Docker é um conjunto de produtos de plataforma como serviço que usam virtualização de nível de sistema operacional para entregar software em pacotes chamados contêineres. Os contêineres são isolados uns dos outros e agrupam seus próprios softwares, bibliotecas e arquivos de configuração.
+</p>
 
 <p align="right"><a href="#topo">Você pode voltar ao topo clicando aqui ↑</a></p>
 <h3 id="tecnologias">Ferramentas e tecnologias utilizadas</h3>
