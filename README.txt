@@ -1,7 +1,7 @@
 Passos para configuração da máquina AWS
 
 Conectar a máquina
-$ ssh ubuntu@107.20.8.92 -o ServerAliveInterval=60
+$ ssh ubuntu@<ip_publico> -o ServerAliveInterval=60
 -------------
 $ sudo apt update
 
@@ -32,7 +32,7 @@ $ source /etc/profile.d/maven.sh
 
 $ mvn -v
 
----jenkins
+---Jenkins
 $ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 $ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 $ sudo apt update
@@ -43,10 +43,10 @@ $ chown root:jenkins /var/run/docker.sock
 local projeto
 $ cd /var/lib/jenkins/workspace/hello-bank
 
----Jenkins
+
     login: hellobank
     senha: root
-    url: http://107.20.8.92:8080/
+    url: http://<ip_publico>:8080/
 
     ferramenta de configuração global
         Nome: Apache Maven 3.6.3
@@ -71,7 +71,7 @@ mysqlx-bind-address = 0.0.0.0
 $ sudo systemctl restart mysql
 
 acesso pelo private IP da máquina
-$ mysql -uroot -p'mysql' -h 172.31.93.65
+$ mysql -uroot -p'mysql' -h <ip_privado>
 
 node {
     def mvnHome
@@ -109,7 +109,7 @@ node {
         sh "docker rm hello-bank --force" 
     }
     stage('deploy') {
-        sh "docker run --net=host --env USER=root --env PASSWORD=mysql --env HOST=172.31.93.65 --env DATABASE=db_hellobank -p 8090:3000 --name hello-bank hello-bank"
+        sh "docker run --net=host --env USER=root --env PASSWORD=mysql --env HOST=<ip_privado> --env DATABASE=db_hellobank -p 8090:3000 --name hello-bank hello-bank"
     }
 }
 
