@@ -390,6 +390,20 @@ $ cd /var/lib/jenkins/workspace/hello-bank
 		sh "docker run --net=host --env USER=root --env PASSWORD=mysql --env HOST=<ip_privado> --env DATABASE=hellobank -p 8090:3000 --name hello-bank hello-bank"
 	    }
 	}
+	
+<h2>Links importantes</h2>
+
+<div>
+Apresentação Canvas: https://www.canva.com/design/DAFMxdS_CrI/_-s21fgyYLs7d4dQlN3Ohw/edit?utm_content=DAFMxdS_CrI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+</div>
+
+<div>
+Github função lambda: https://github.com/dantaswendel/ReconheceFaces
+</div>
+
+<div>
+Acesso à função lambda: http://fasite.s3-website-us-east-1.amazonaws.com/
+</div>
 
 <h2 id="ferramentas">Postman</h2>
 <p>
