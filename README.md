@@ -6,6 +6,108 @@ Esse projeto consiste em uma API para gerenciar as transações de um banco fict
 <hr>
 
 
+<h3 id="squad">Nós somos a Squad MEIDIA...</h3>
+Você pode ver mais acerca do nosso desenvolvimento através dos repositórios contidos no GitHub e nos contatar pelo linkedin. Agradecemos desde já o tempo que você dedicou a leitura deste arquivo.😄
+<br><br>
+	
+<a href="https://storyset.com/work">
+   <img src="https://lh3.googleusercontent.com/RsdjOklmOEFJc7dlw2n_3YaoRjEcfOky7u2_JFRjWyWyWxjZP_JNLiR9rCzTVvsuSg23zKsSQZpXLSsFfS36NNepjioe2YgiJuaK9TxJqwMLfLfwpDU0_wNg4287dVqJ-uhF9NeER2FP9befMxYeKa5TxI8ymxG98yqThJppqV5aKNmheowB8zk4y1x5RE0bU2YulHdhrwCjqbAWKQ1SirJesjzSunG7unafnU500a9X1CW5nuDVd_DTp5jNHd2lVeZiad9wUHkIsittzB10mg6f7fjAtrMDbP1biVDVH1Xs8urnqQosoPYY77HobXK9eEuwTpAUiAS635RW2AbVY-kJCT_kT81IXmwIQheTmF4xMOR-XL-u2J2zdv2vkIFls0FOwdauQgA5JaTBdtyXOxNx9eQnekp6LjCzLBWGmnrh9E6MTCUCP-anrmJsQiLf6GvLEL6WKXcEMTKQK3kKhW77bWGGddjG8l4l23ZQGyCiOiRn9Cpvr_vLmoRzwVysChkIFeOn9L1sdo1qOPX0iQXxWEJPzA_kPNgGJB0L-4jHSMAohNZj7WKE4XWjdJgPZHvix_0oatx9bMo0dgJ5ZuW4oT18dPvBDq4fc9DxCnKRWWfjdT71cTgLBF4qOKSjQtclaqvquRe9EOeN5vPKoZwQtjRjHsUulbT-MUx7XzJDhJ1JWRXJrssUwkmIkBgNQxX5FO5ZdTbNkvxSPp5BTgQvGpFZ0N4qLlHqCybD9v85u3oxcEJTvTgWhA9FpdnYWcUbkcT08wtDjyhuoD5YQ10WxQK5NUObGaTVVdCzgQmi-WoBxfBdfNdS2xM6buadK7GHiAmjQlkMoT8obTGxtcVzfEeUvy_PQEZyqunSgYHDelJ21rQpf6GpOXk75UT1IRsZ6WNQp5JetuM3YQzzt6c10Lgw1HIaMcfilnOzcw=s893-no?authuser=0" min-width="350px" max-width="350px" width="350px" align="right"  alt="Work illustrations by Storyset">
+</a>
+<table width="40%">
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQG9Vs-R_onpYQ/profile-displayphoto-shrink_800_800/0/1637952264056?e=1668643200&v=beta&t=0zR500-9XV2HSqqpl7Y4fIWsi4Tv5Rtq7S3V_muM82E" alt="Foto Alexandre" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/alexandreps1123">
+                <img src="https://img.shields.io/badge/%20Alexandre%20%20%20%20%20%20%20%20%20Ferreira%20-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/alexandreps1123/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/%20Alexandre%20%20%20%20%20%20%20%20%20Ferreira%20-0077B5?style=social&logo=linkedin&logoColor=00C6FF&" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGe7HUqViF2tQ/profile-displayphoto-shrink_800_800/0/1636035943602?e=1668643200&v=beta&t=PSK2nweWJIReCjNG0JwWIhemahcdHao2-9JIZq5i1-w" alt="Foto Euritales" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/euritales">
+                <img src="https://img.shields.io/badge/%20Euritales(Tales)%20%20%20%20%20%20%20%20%20Silva%20-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/euritales/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/%20Euritales(Tales)%20%20%20%20%20%20%20%20%20Silva%20-0077B5?style=social&logo=linkedin&logoColor=00C6FF&" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFB1yPtkRq6hg/profile-displayphoto-shrink_800_800/0/1641245008572?e=1669248000&v=beta&t=rMOOHmamSgaXziW1ERF89pg-hkIMVkUO2bXYjFtlV4Q" alt="Foto Gerson" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/GersonRYE">
+                <img src="https://img.shields.io/badge/Gerson%20Ronaldo-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/gerson-ronaldo-011282220/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/Gerson%20Ronaldo-0077B5?style=social&logo=linkedin&logoColor=00C6FF" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://avatars.githubusercontent.com/u/68935244?s=400&u=60e3df703d368ccfafb34e5bbce49fc5807c89f4&v=4" alt="Foto Laryssa Peçanha" height="70px" style="border-radius:10px text-align: center;">
+        </td>
+        <td align="center">
+            <a href="https://github.com/laryscampark">
+                <img src="https://img.shields.io/badge/Laryssa%20%20%20%20Peçanha-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/laryssape%C3%A7anha/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/Laryssa%20%20%20%20%20Peçanha-0077B5?style=social&logo=linkedin&logoColor=00C6FF" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/C5603AQENlBdCKpmINw/profile-displayphoto-shrink_800_800/0/1606437368461?e=1668643200&v=beta&t=K7aVKgHLHs3fbXmIy6xAeExxHywR0z8w5oWnw07vevU" alt="Foto Wegelys Ferreira Alves" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/Wegelys">
+                <img src="https://img.shields.io/badge/Wegelys%20%20%20%20Ferreira Alves-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/wegelys-ferreira-alves-8a3b10200/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/Wegelys%20%20%20%20%20Ferreira Alves-0077B5?style=social&logo=linkedin&logoColor=00C6FF" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQEl1PalWThpYg/profile-displayphoto-shrink_800_800/0/1642071666024?e=1668643200&v=beta&t=6IqZnZdJUs-0CwyNAfDf_yiCZyZk8DfJbaVoGh13CL0" alt="Foto Wendel" height="70px" style="border-radius:10px">
+        </td>
+        <td align="center">
+            <a href="https://github.com/dantaswendel">
+                <img src="https://img.shields.io/badge/%20Wendel%20%20%20%20%20Dantas%20%20-10?style=social&logo=github&logoColor=006A8A" width="150px;" alt="GitHub" />
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://www.linkedin.com/in/wendel-dantas-lima-5104b0166/" target="_blank" alt="Linkedin">
+                <img src="https://img.shields.io/badge/%20Wendel%20%20%20%20%20%20Dantas%20%20-0077B5?style=social&logo=linkedin&logoColor=00C6FF" width="150px;" alt="Linkedin" />
+            </a>
+        </td>
+</table>
+<p align="right"><a href="#topo">Você pode voltar ao topo clicando aqui ↑</a></p>
+
+
+
 <h2 align="center" id="requisitos">Entregas Minímas</h2>
 <h3 id="RQEntrega"> - Metodologias Ágeis</h3>
 
