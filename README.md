@@ -104,7 +104,6 @@ Você pode ver mais acerca do nosso desenvolvimento através dos repositórios c
             </a>
         </td>
 </table>
-<p align="right"><a href="#topo">Você pode voltar ao topo clicando aqui ↑</a></p>
 
 
 
