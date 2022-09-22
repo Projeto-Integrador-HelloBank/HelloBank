@@ -229,6 +229,9 @@ $ ssh ubuntu@<ip_publico> -o ServerAliveInterval=60
 ```
 $ sudo apt update
 ```
+```
+$ sudo apt upgrade
+```
 
 ##### Nginx
 ```
