@@ -38,16 +38,6 @@ emails e verificação automática.
 
 - [X] Testes automatizados, podem ser testes unitários ou testes de integração.
 
-
-<h2 align="center" id="requisitos">Requisitos e Funcionalidades</h2>
-
-- [X] Testes automatizados, podem ser testes unitários ou testes de integração;
-- [X] A API deve ser disponibilizada em ambiente AWS com EC2 e em Beanstalk;
-- [X] A aplicação deve ter um pipeline em Jenkins ou no Aws Build;
-- [X] A aplicação precisa ser configurada no API Gateway da AWS;
-- [X] A aplicação precisa ter no mínimo um endpoint de SNS para cadastro de emails e verificação automática;
-- [X] A aplicação precisa ter no mínimo um Lambda;
-
 <br/><hr>
 
 <h2 id="endpoints">Endpoints</h2>
