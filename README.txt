@@ -8,6 +8,19 @@ $ sudo apt update
 ---nginx
 $ sudo apt install nginx
 
+--- config nginx
+$ vim /etc/nginx/sites-avaliable/default
+
+server {
+    listen 80 default_server;
+    listen [::]80 default_server;
+    location / {
+        proxy_pass http://localhost:8090;
+    }
+}
+
+$ source /etc/nginx/sites-avaliable/default
+
 ---java 17
 $ sudo apt install openjdk-17-jdk openjdk-17-jre
 
@@ -32,6 +45,9 @@ $ source /etc/profile.d/maven.sh
 
 $ mvn -v
 
+---docker
+$ sudo apt install docker.io
+
 ---Jenkins
 $ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 $ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
@@ -52,27 +68,7 @@ $ cd /var/lib/jenkins/workspace/hello-bank
         Nome: Apache Maven 3.6.3
         MAVEN_HOME: /opt/maven
 
----docker
-$ sudo apt install docker.io
-
----mysql
-$ sudo apt install mysql-server
-
-$ sudo mysql
-
-mysql> CREATE USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'mysql';
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
-mysql> FLUSH PRIVILEGES;
-
-$ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
-bind-address        = 0.0.0.0
-mysqlx-bind-address = 0.0.0.0
-
-$ sudo systemctl restart mysql
-
-acesso pelo private IP da máquina
-$ mysql -uroot -p'mysql' -h <ip_privado>
-
+---Pipeline
 node {
     def mvnHome
     stage('Preparation') {
@@ -113,13 +109,20 @@ node {
     }
 }
 
---- config nginx
-$ vim /etc/nginx/sites-avaliable/default
+---mysql
+$ sudo apt install mysql-server
 
-server {
-    listen 80 default_server;
-    listen [::]80 default_server;
-    location / {
-        proxy_pass http://localhost:8090;
-    }
-}
+$ sudo mysql
+
+mysql> CREATE USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'mysql';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+mysql> FLUSH PRIVILEGES;
+
+$ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+bind-address        = 0.0.0.0
+mysqlx-bind-address = 0.0.0.0
+
+$ sudo systemctl restart mysql
+
+acesso pelo private IP da máquina
+$ mysql -uroot -p'mysql' -h <ip_privado>
