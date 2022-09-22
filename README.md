@@ -496,7 +496,7 @@ Você pode ver mais acerca do nosso desenvolvimento através dos repositórios c
     </tr>
     <tr>
         <td>
-            <img src="https://media-exp1.licdn.com/dms/image/D4E35AQFswrCcE3nfkg/profile-framedphoto-shrink_800_800/0/1641248734714?e=1664046000&v=beta&t=0k9xbfqlzigVhtdPAO6wam8rc8Mt3aiVUhrcGgAtXG8" alt="Foto Gerson" height="70px" style="border-radius:10px">
+            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFB1yPtkRq6hg/profile-displayphoto-shrink_800_800/0/1641245008572?e=1669248000&v=beta&t=rMOOHmamSgaXziW1ERF89pg-hkIMVkUO2bXYjFtlV4Q" alt="Foto Gerson" height="70px" style="border-radius:10px">
         </td>
         <td align="center">
             <a href="https://github.com/GersonRYE">
