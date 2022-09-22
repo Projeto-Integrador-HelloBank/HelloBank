@@ -36,7 +36,7 @@ emails e verificação automática.
 
 <h3 id="RQEntrega"> - Entrega Opcional </h3>
 
-- [ ] Testes automatizados, podem ser testes unitários ou testes de integração.
+- [X] Testes automatizados, podem ser testes unitários ou testes de integração.
 
 
 <h2 align="center" id="requisitos">Requisitos e Funcionalidades</h2>
