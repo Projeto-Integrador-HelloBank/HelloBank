@@ -384,7 +384,7 @@ $ cd /var/lib/jenkins/workspace/hello-bank
 		sh "docker rm hello-bank --force" 
 	    }
 	    stage('deploy') {
-		sh "docker run --net=host --env USER=root --env PASSWORD=mysql --env HOST=<ip_privado> --env DATABASE=db_hellobank -p 8090:3000 --name hello-bank hello-bank"
+		sh "docker run --net=host --env USER=root --env PASSWORD=mysql --env HOST=<ip_privado> --env DATABASE=hellobank -p 8090:3000 --name hello-bank hello-bank"
 	    }
 	}
 
