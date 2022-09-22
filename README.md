@@ -398,7 +398,7 @@ Acesso à função lambda: http://fasite.s3-website-us-east-1.amazonaws.com/
 <h2 id="ferramentas">Postman</h2>
 <p>
     O Postman é uma ferramenta que dá suporte à documentação das requisições feitas pela API. Ele possui ambiente para a documentação, execução de testes de APIs e requisições em geral. 
-    Disponibilizamos um <a href= "https://documenter.getpostman.com/view/14129628/VVHx2dei#f1f84850-2599-4a39-9204-71c104c546ca">LINK</a> onde estão disponíveis requisições para testar a aplicação.
+    Disponibilizamos um <a href= "https://documenter.getpostman.com/view/23262373/2s7YmtD5ZK">Link</a> onde estão disponíveis requisições para testar a aplicação.
 </p>
 
 <h2 id="ferramentas">Docker</h2>
